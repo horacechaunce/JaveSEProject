@@ -2,6 +2,7 @@ package com.shihong.test.array;
 
 /**
  * @author shihong on 2019/4/14.
+ * 数组比较大小
  */
 public class ArrayConparisionSize {
 

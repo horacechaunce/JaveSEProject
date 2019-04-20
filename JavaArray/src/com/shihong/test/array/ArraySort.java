@@ -3,6 +3,7 @@ package com.shihong.test.array;
 
 /**
  * @author shihong on 2019/4/13.
+ * 数组排序
  */
 public class ArraySort {
 
@@ -35,6 +36,11 @@ public class ArraySort {
         selectSort(arr);
         outPut(arr);//排序后
 
+        // 选择排序二
+        outPut(arr);//排序前
+        selectSort_2(arr);
+        outPut(arr);//排序后
+
         //冒泡排序一
         outPut(arr);
         bubbleSort_1(arr);
@@ -46,7 +52,6 @@ public class ArraySort {
 
 
     }
-
 
 
     /**
@@ -66,6 +71,36 @@ public class ArraySort {
                     arr[i] = arr[j];
                     arr[j] = temp;
                 }
+            }
+        }
+    }
+
+    /**
+     * 选择排序二
+     * 外循环的一个位置的元素与内循环的所有元素比较大小
+     * 这里比较大小使用的方式是一样的，只是在比较后没有立即替换位置，
+     * 而是记录下数值与角标，比较到最后一个元素后，再进行数值的替换
+     *
+     * @param arr
+     */
+    public static void selectSort_2(int[] arr) {
+
+        //长度-1因为最后一个数组元素没有必要跟自身比较
+        for (int i = 0; i < arr.length - 1; i++) {
+            int num = arr[i];
+            int index = i;
+            // j从i+1开始，因为没有必要跟自身比较
+            for (int j = i + 1; j < arr.length; j++) {
+                if (num > arr[j]) {
+                    num = arr[j];
+                    index = j;
+                }
+            }
+
+            if(index != i) {
+                int temp = arr[i];
+                arr[i] = arr[index];
+                arr[index] = temp;
             }
         }
     }
