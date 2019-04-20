@@ -98,5 +98,5 @@ public class ArraySearch {
         }
 
         return -1 - min;
-    }
+    } 
 }
