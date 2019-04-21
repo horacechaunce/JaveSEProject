@@ -3,8 +3,8 @@ package com.shihong.test.object;
 /**
  * @author shihong on 2019/4/20.
  */
-public class Object {
-
+public class ObjectA {
+ 
 /*
 类的概念：
     用java语言对现在生活中的事物进行描述（即通过类的形式来体现的）

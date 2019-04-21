@@ -51,7 +51,8 @@ public class ArraySearch {
 
     /**
      * 二分查询一，
-     *  找不到时返回 -1 - min 是查找不到时返回找不到的这个数的插入点再 -1；
+     * 找不到时返回 -1 - min 是查找不到时返回找不到的这个数的插入点再 -1；
+     *
      * @param arr1
      * @param key
      * @return
@@ -79,6 +80,7 @@ public class ArraySearch {
     /**
      * 二分查询二，
      * 找不到时返回 -1 - min 是查找不到时返回找不到的这个数的插入点再 -1；
+     *
      * @param arr
      * @param key
      * @return
@@ -88,15 +90,24 @@ public class ArraySearch {
         int max = arr.length - 1;
         //min < max 说明还在查找范围内
         while (min <= max) {
-            int mid = (max + min) / 2;
-            if (key > arr[mid])
+            int mid = 0;
+
+            //为了防止计算平均值溢出
+            if ((min ^ max) < 0) {
+                mid = (max + min) / 2;
+            } else {
+                mid = min + (max - min) / 2;
+            }
+
+            if (key > arr[mid]) {
                 min = mid + 1;
-            else if (key < arr[mid])
+            } else if (key < arr[mid]) {
                 max = mid - 1;
-            else
+            } else {
                 return mid;
+            }
         }
 
         return -1 - min;
-    } 
+    }
 }
