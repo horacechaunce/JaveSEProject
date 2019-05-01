@@ -108,6 +108,6 @@ public class ArraySearch {
             }
         }
 
-        return -1 - min;
+        return -1 - min; 
     }
 }
