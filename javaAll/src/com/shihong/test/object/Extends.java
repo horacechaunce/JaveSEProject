@@ -69,18 +69,20 @@ public class Extends {
 
 }
 /*
- 以下是一个练习题 ，考点是继承时对象加载过程，运行结果是
+ 以下是一个练习题 ，考点是继承时对象初始化过程，运行结果是
     shape draw constructor
     shape constructor
     circle draw constructor
     circle constructor
- 出现这样的结果是因为在类加载过程中，如下面标注的数字顺序
+ 出现这样的结果是因为在执行过程中，如下面标注的数字顺序
 
 
 class Test {
 
     public static void main(String[] args)  {
         new Circle(); //开始调用 1
+        //在对象调用后，在内存开辟空间，对属性先默认初始化，
+        //然后执行父类的构造函数结束后，再对子类的属性显示初始化
     }
 }
 
@@ -93,11 +95,11 @@ class Draw {
 }
 
 class Shape {
-    private Draw draw = new Draw("shape"); //加载成员,调用Draw(type) 4
-    private String s = null;   // 加载成员 ， 7
+    private Draw draw = new Draw("shape"); //初始化成员,调用Draw(type) 4
+    private String s = null;   // 初始化成员 ， 7
 
     public Shape(){
-        super(); //无参构造运行后，加载它的成员 3   第7步完成后返回到这里
+        super(); //无参构造运行后，初始化父类的变量再初始化它的成员 3   第7步完成后返回到这里
         System.out.println("shape constructor"); //输出  8
     }
 }
