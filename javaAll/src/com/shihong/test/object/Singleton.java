@@ -20,9 +20,11 @@ package com.shihong.test.object;
  *  因此它是懒汉式的；同时读取实例的时候不会进行同步，没有性能缺陷；也不依赖 JDK 版本。
  * public class Singleton {
  *
+ *    //这里使用私有内部类的方式使单例对象不能被外界访问，
+ *    //其中static final这种写法仍然使用JVM本身机制保证了线程安全问题；
      private static class SingletonHolder {
          private static final Singleton INSTANCE = new Singleton();
-         }
+     }
      private Singleton (){}
 
      public static final Singleton getInstance() {
