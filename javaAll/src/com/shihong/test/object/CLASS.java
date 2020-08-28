@@ -3,7 +3,7 @@ package com.shihong.test.object;
 /**
  * @author shihong on 2019/4/20.
  */
-public class ObjectA {
+public class CLASS {
  
 /*
 类的概念：
