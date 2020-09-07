@@ -74,7 +74,7 @@ public class StringTest {
 		String str = "123ads456adsadsadadadada";
 		String str2 = "123456ads54essadadadada";
 		*//*int ada = getCount(str, "ada");
-		System.out.println(ada);*//*
+		System.out.println(ada);*//*a
 		String same = getSame(str, str2);
 		System.out.println(same);
 	}*/
