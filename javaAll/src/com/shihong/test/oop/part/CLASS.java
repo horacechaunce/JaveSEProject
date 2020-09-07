@@ -1,7 +1,8 @@
-package com.shihong.test.object;
+package com.shihong.test.oop.part;
 
 /**
  * @author shihong on 2019/4/20.
+ * 类的概念
  */
 public class CLASS {
  
