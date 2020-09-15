@@ -22,7 +22,7 @@ public class DateFormate {
 
 			e) 常用方法
 				f)	getTime():返回自 1970 年  1 月  1 日  00:00:00 GMT 以来此 Date对象表示的毫秒数。
-				g)	toString():把此 Date 对象转换为以下形式的 String：  dow mon dd hh:mm:ss zzz yyyy
+				g)	toString():把此 Date 对象转换为以下形式的 字符串：  dow mon dd hh:mm:ss zzz yyyy
 					其中： dow 是一周中的某一天 (Sun, Mon, Tue, Wed, Thu, Fri, Sat)，zzz是时间标准
 				e)	Date类的API不易于国际化，大部分被废弃了，java.text.Simp
 					leDateFormat类是一个不与语言环境有关的方式来格式化和解析日期 的具体类。
