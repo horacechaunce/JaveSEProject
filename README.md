@@ -9,7 +9,7 @@ JavaSE项目学习使用仓库
             详细内容查看oop包下的readme.txt文件
         3，java提供的API类库，常用方法
             1) 包装类 Wrapper类
-            2) 字符串类 String
+            2) 字符串类 StringObj
             3) 两种字符串的内存分析 str1AndStr2.png
             4）字符串的面试题 StringTest
             5）字符串缓冲  BufferAndBuilder
