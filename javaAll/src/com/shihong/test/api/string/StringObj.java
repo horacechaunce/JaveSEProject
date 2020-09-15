@@ -4,7 +4,7 @@ package com.shihong.test.api.string;
  * @author shihong on 2020/9/4.
  * 字符串
  */
-public class String {
+public class StringObj {
 
 	/*
 
